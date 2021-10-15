@@ -13,7 +13,7 @@
 using namespace std;
 
 //Declare functions
-void threeTimesN(int aVal, int& aRef );
+void threeTimesN(int input, int& output );
 
 
 //Declare variables
@@ -22,9 +22,9 @@ int aVal = 5;
 int main()
 {
 	
-	void threeTimesN(int aVal, int& aRef);	//invoke the function
+	void threeTimesN(int input, int& output);	//invoke the function
 	cout << "The input number is: " << aVal << endl;
-	threeTimesN(aVal,  aVal);		//the second argument points to the reference variable (aRef = aVal * 3-different scope) 
+	threeTimesN(60,  aVal);		//the second argument points to the reference variable (aRef = aVal * 3-different scope) 
 									//the first argument point to the local scope variable (int aVal = 5)
 	cout <<"The output of the referenced value times the passed value is: " << aVal;
 	
@@ -33,7 +33,7 @@ int main()
 	return 0;
 }
 
-void threeTimesN(int aVal, int& aRef)
+void threeTimesN(int input, int& output)
 {
-	aRef = aVal * 3;	
+	output = input * 3;	
 }
