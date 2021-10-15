@@ -13,16 +13,25 @@
 using namespace std;
 
 //Declare functions
-void threeTimesN(int aVal, int & aRef );
+void threeTimesN(int aVal, int& aRef );
+
+
+//Declare variables
+int aVal = 5;
 
 int main()
 {
+	
 	void threeTimesN(int aVal, int& aRef);
-
+	threeTimesN(aVal,  aVal);
+	cout << aVal * aVal;
+	 
 	return 0;
 }
 
 void threeTimesN(int aVal, int& aRef)
 {
-
+	aRef = 100;
+	int refOutput = aVal * aRef;
+	
 }
