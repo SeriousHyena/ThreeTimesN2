@@ -24,8 +24,8 @@ int main()
 	
 	void threeTimesN(int input, int& output);	//invoke the function
 	cout << "The input number is: " << aVal << endl;
-	threeTimesN(60,  aVal);		//the second argument points to the reference variable (aRef = aVal * 3-different scope) 
-									//the first argument point to the local scope variable (int aVal = 5)
+	threeTimesN(60,  aVal);						//the second argument points to the reference variable (aRef = aVal * 3-different scope) 
+												//the first argument point to the local scope variable (int aVal = 5)
 	cout <<"The output of the referenced value times the passed value is: " << aVal;
 	
 	cout << endl << endl;
