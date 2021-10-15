@@ -22,16 +22,18 @@ int aVal = 5;
 int main()
 {
 	
-	void threeTimesN(int aVal, int& aRef);
-	threeTimesN(aVal,  aVal);
-	cout << aVal * aVal;
+	void threeTimesN(int aVal, int& aRef);	//invoke the function
+	cout << "The input number is: " << aVal << endl;
+	threeTimesN(aVal,  aVal);		//the second argument points to the reference variable (aRef = aVal * 3-different scope) 
+									//the first argument point to the local scope variable (int aVal = 5)
+	cout <<"The output of the referenced value times the passed value is: " << aVal;
+	
+	cout << endl << endl;
 	 
 	return 0;
 }
 
 void threeTimesN(int aVal, int& aRef)
 {
-	aRef = 100;
-	int refOutput = aVal * aRef;
-	
+	aRef = aVal * 3;	
 }
